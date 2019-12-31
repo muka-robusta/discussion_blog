@@ -1,0 +1,26 @@
+<h3>News</h3>
+<div class="row">
+	<%= for tape_el <- @news do %>
+		<div class="col s6 m6">
+				<div class="card">
+					<div class="card-content"> 
+						<span class="card-title">
+							<%= tape_el.heading %>
+						</span>
+
+						<p>
+							<%= tape_el.article %>
+						</p>
+						<div class="card-action">
+							<%= link "Open", to: news_path(@conn, :show, tape_el.id) %>
+						</div>
+					</div>			
+				</div>
+		</div>
+	<% end %>
+</div>
+
+	
+			
+		
+

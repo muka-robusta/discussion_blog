@@ -1,0 +1,15 @@
+<h3 align="center">Authentication</h3>
+
+<div class="row" align="center">
+	<%= form_for @changeset, user_path(@conn, :authentication), fn f -> %>
+		<div class="card login_card_1">
+			<div class="container login_card_comp_1">
+				<i class="material-icons head_ico">fingerprint</i>
+				<%= email_input f, :email, placeholder: "Email", class: "validate login_txt_input_1" %>
+				<%= password_input f, :password, placeholder: "Password", class: "validate" %> 
+				<%= submit "Authenticate", class: "btn waves-effect waves-light login_submit_btn_1" %>
+			</div>
+		</div>
+		
+	<% end %>	
+</div>

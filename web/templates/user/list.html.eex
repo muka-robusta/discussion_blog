@@ -1,0 +1,16 @@
+<ul class="collection with-header">
+	<li class="collection-header"><h4>Users</h4></li>
+	<%= for user <- @users do %>
+		<%= if @conn.assigns.user.uuid != user.uuid do %>
+			<li class="collection-item">
+				<%= user.first_name %>
+				<%= user.second_name %>
+			</li>
+			<% else %>
+			<li class="collection-item active">
+				<%= user.first_name %>
+				<%= user.second_name %>
+			</li>
+		<% end %>
+	<% end %>
+</ul>

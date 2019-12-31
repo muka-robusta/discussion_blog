@@ -1,0 +1,19 @@
+
+	
+		<div class="col s12 m12">
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">Active link</span>
+					<p>
+						Send the link if you want to share you account information. 
+					</p>
+					<div class="input-field link_area">
+						<i class="material-icons mi_marg">share</i>
+						<%= text_input :temp_article, :link, value: "localhost:4000/user/" <> @hash_link %>					
+						
+					</div>
+				</div>
+			</div>			
+		</div>
+	
+	

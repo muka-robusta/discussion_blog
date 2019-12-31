@@ -1,0 +1,30 @@
+<div class="conntainer">
+	<table class="highlight">
+		<thead>
+			<tr>
+				<th class="tbl_head">Property</th>
+				<th class="tbl_head">Value</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<th class="prop">First name</th>
+				<th class="value"><%= @user.first_name %></th>
+			</tr>
+			<tr>
+				<th class="prop">Second name</th>
+				<th class="value"><%= @user.second_name %></th>
+			</tr>
+			<tr>
+				<th class="prop">Email</th>
+				<th class="value"><%= @user.email %></th>
+			</tr>
+			<tr>
+				<th class="prop">Username</th>
+				<th class="value"><%= @user.username %></th>
+			</tr>
+		</tbody>
+
+	</table>
+</div>

@@ -1,0 +1,56 @@
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/heading_card_photo.jpg">
+          <span class="card-title">Simple posts</span>
+           <%= link to: news_path(@conn, :new), class: "btn-floating halfway-fab waves-effect waves-light red" do %> 
+              <i class="material-icons">add</i> 
+           <% end %>
+        </div>
+        <div class="card-content">
+          <p>Here you can add you article. Just text. No more.</p>
+        </div>
+      </div>
+    </div>
+
+
+  <%= unless @conn.assigns[:user] do %>
+  <div class="col s12 m6 manip_block">
+    <%= link to: user_path(@conn, :new), class: "waves-effect waves-light btn-large btn_manip light-blue" do %>
+      <i class="material-icons">accessibility_new</i>
+      Sign up
+    <% end %>
+
+    <p class="par_manip">
+      Already have an account?
+    </p>
+
+    <%= link to: user_path(@conn, :log_in), class: "waves-effect waves-light btn-large btn_manip light-blue" do %>
+      <i class="material-icons">fingerprint</i>
+      Sign in
+    <% end %>
+  </div>
+    <% else %>
+  <div class="col s12 m6 manip_block">
+    
+    <%= link to: user_path(@conn, :userpage), class: "waves-effect waves-light btn-large btn_manip light-blue profile_button" do %>
+      My account
+    <% end %>
+
+    <%= link to: news_path(@conn, :new), class: "waves-effect waves-light btn-large btn_manip light-blue profile_button" do %>
+      New post
+    <% end %>
+
+    <%= link to: news_path(@conn, :index), class: "waves-effect waves-light btn-large btn_manip light-blue profile_button" do %>
+      Posts
+    <% end %>
+
+    <%= link to: user_path(@conn, :temp_id), class: "waves-effect waves-light btn-large btn_manip light-blue profile_button" do %>
+      Generate temp link
+    <% end %>   
+
+  </div>  
+  <% end %>
+</div>
+

@@ -1,0 +1,7 @@
+<%= form_for @changeset, news_path(@conn, :update, @news), fn f -> %>
+	<div class="form-group">
+		<%= text_input f, :heading, placeholder: "Title", class: "form-controll" %>
+		<%= textarea f, :article, placeholder: "Tell your story", class: "materialize-textarea article-input" %>
+	</div>
+	<%= submit "Save publication", class: "btn btn-primary" %>
+<% end %>	

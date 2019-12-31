@@ -1,0 +1,24 @@
+<h3>Creating user</h3>
+
+<script type="text/javascript">
+	document.getElementById("submit_btn").onclick=function(){
+		alert("lol")
+		if(document.getElementById("first_name_input").value > 50 &&
+			document.getElementById("second_name_input").value > 50)  {
+			
+		}		
+	}
+</script>
+
+<%= form_for @changeset, user_path(@conn, :create), fn f -> %>
+	<div class="form-group">
+		<%= text_input f, :first_name, placeholder: "First name", class: "form-controll", id: "first_name_input" %>
+		<%= text_input f, :second_name, placeholder: "Second name", class: "form-controll", id: "second_name_input" %>
+		<%= text_input f, :username, placeholder: "Choose nickname", class: "form-controll" %>
+		<%= email_input f, :email, placeholder: "Email", class: "form-controll" %>
+		<%= password_input f, :password, placeholder: "Password", class: "validate" %>
+		<%= password_input f, :password_confirmation, placeholder: "Confirm Your Secret Key", class: "validate" %>
+	</div>
+
+	<%= submit "Create account", class: "btn btn-primary", id: "sb"%>
+<% end %>

@@ -1,0 +1,40 @@
+<div class="container">
+	
+		<div class="col s12 m12">
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">
+						<%= @news.heading %>
+					</span>
+					<p>
+						<%= @news.article %>
+					</p>
+					
+					
+
+					<%= if @conn.assigns.user.id == @news.user_id do %>
+						<div class="card-action">
+							<%= link to: news_path(@conn, :delete, @news.id), method: :delete do %>
+
+								<i class="material-icons">delete</i>
+								
+							<% end %>
+
+							<%= link to: news_path(@conn, :edit, @news.id) do %>
+
+								<i class="material-icons">edit</i>
+								
+							<% end %>							
+							<p class="cr_date">
+								
+								<%= @news.creation_date.year %>.<%=@news.creation_date.month %>.<%= @news.creation_date.day %>
+								at   
+								<%= @news.creation_date.hour %>:<%= @news.creation_date.minute %>
+							</p>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	
+</div>

@@ -1,0 +1,80 @@
+.article-input {
+	min-height: 500px;
+	
+}
+
+.manip_block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+
+}
+
+.prop {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.value {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.tbl_head {
+	font-size: 25px;
+}
+
+.btn_manip {
+	width: 80%;
+}
+
+.cr_date {
+	color: #ccc;
+}
+
+.link_area {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.mi_marg {
+	margin-right: 25px;
+}
+
+.par_manip {
+	margin-top: 35px;
+}
+
+.profile_button {
+	margin-bottom: 5px;
+}
+
+.head_ico {
+	margin-bottom: 35px;
+}
+
+.login_submit_btn_1 {
+	margin-top: 20px;
+}
+
+.login_card_comp_1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.login_card_1 {
+	width: 350px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+}
+
+.redded {
+	background-color: red;
+}
